@@ -2,24 +2,24 @@ package com.SweetCreamPink.demoSpringBoot;
 
 import jakarta.persistence.*;
 
-@Entity
-@Table(name = "productos")
+@Entity // Convierte la clase en una entidad de base de datos
+@Table(name = "productos") // Vincula la clase con la tabla "productos" en MySQL
 public class Producto {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id // Marca el campo como llave primaria
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Genera IDs autoincrementales
     private Long id;
     
-    private String nombre;
-    private String descripcion;
-    private Double precio;
+    private String nombre; // Nombre comercial del producto
+    private String descripcion; // Detalle o características del producto
+    private Double precio; // Costo unitario del producto
 
-    @Lob
-    @Column(columnDefinition = "LONGBLOB")
-    private byte[] imagen; // Se guarda el archivo real en la BD
+    @Lob // Indica que el campo manejará un objeto grande (Large Object)
+    @Column(columnDefinition = "LONGBLOB") // Define el tipo de dato en MySQL para archivos pesados
+    private byte[] imagen; // Almacena el archivo de imagen en formato binario
 
-    public Producto() {}
+    public Producto() {} // Constructor vacío requerido por JPA
 
-    // Getters y Setters
+    // Getters y Setters: Métodos para leer y escribir los datos del producto
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     public String getNombre() { return nombre; }

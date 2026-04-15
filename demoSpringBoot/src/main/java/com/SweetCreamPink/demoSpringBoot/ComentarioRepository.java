@@ -3,7 +3,7 @@ package com.SweetCreamPink.demoSpringBoot;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
+@Repository // Indica que es un componente de acceso a datos (DAO)
 public interface ComentarioRepository extends JpaRepository<Comentario, Long> {
-    // Aquí Java hereda automáticamente métodos como findById, save, y findAll
+    // JpaRepository: Proporciona métodos CRUD (save, delete, findById) automáticamente
 }

@@ -2,40 +2,40 @@ package com.SweetCreamPink.demoSpringBoot;
 
 import jakarta.persistence.*;
 
-@Entity
-@Table(name = "usuario")
+@Entity // Clase vinculada a una tabla de base de datos
+@Table(name = "usuario") // Nombre de la tabla física en MySQL
 public class Usuario {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "usuId")
+    @Id // Llave primaria de la tabla
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Incremento automático del ID
+    @Column(name = "usuId") // Nombre real de la columna en MySQL
     private Long id;
 
-    @Column(name = "usuNombre")
+    @Column(name = "usuNombre") // Mapea atributo al campo usuNombre
     private String nombre;
 
-    @Column(name = "usuApellido")
+    @Column(name = "usuApellido") // Mapea atributo al campo usuApellido
     private String apellido;
 
-    @Column(name = "usuCorreo", unique = true)
+    @Column(name = "usuCorreo", unique = true) // Correo único (no permite duplicados)
     private String correo;
 
-    @Column(name = "usuContrasena")
+    @Column(name = "usuContrasena") // Almacena el Hash de la contraseña encriptada
     private String password;
 
-    @Column(name = "usuTelefono")
+    @Column(name = "usuTelefono") // Mapea atributo al campo usuTelefono
     private String telefono;
 
-    @Column(name = "usuDireccion")
+    @Column(name = "usuDireccion") // Mapea atributo al campo usuDireccion
     private String direccion;
 
-    @Column(name = "rolId_fk")
+    @Column(name = "rolId_fk") // Llave foránea que define el rol del usuario
     private Integer rolId;
 
-    // Constructores
+    // Constructor vacío necesario para el funcionamiento de JPA
     public Usuario() {}
 
-    // Getters y Setters
+    // Getters y Setters: Métodos para acceder y modificar los datos del usuario
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
