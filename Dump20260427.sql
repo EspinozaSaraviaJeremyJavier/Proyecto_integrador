@@ -435,7 +435,7 @@ CREATE TABLE `usuario` (
   UNIQUE KEY `usuCorreo` (`usuCorreo`),
   KEY `rolId_fk` (`rolId_fk`),
   CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`rolId_fk`) REFERENCES `rol` (`rolId`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -444,7 +444,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'Jefe',NULL,'jefe@gmail.com','1234',NULL,NULL,1),(2,'Jeremy',NULL,'jeremy@gmail.com','123',NULL,NULL,2),(3,'Gabriela',NULL,'gabi@gmail.com','456',NULL,NULL,2),(4,'Sofia',NULL,'sofia@gmail.com','789',NULL,NULL,2),(5,'Julio',NULL,'julio@gmail.com','1234567',NULL,NULL,2);
+INSERT INTO `usuario` VALUES (1,'Admin',NULL,'adminRosa@gmail.com','$2a$10$91ZzpQMhu8TQK/hH9YfGDe0ahqVyoScIOIEKh9zJNyDbtVVjelZi.',NULL,NULL,2),(2,'Sofia Acuña',NULL,'sofi@gmail.com','$2a$10$cbkEvJUnfYRed5Ar8QuzYeB3eIfjOvmwwbcMACaLN7BzNoPVJnZYO',NULL,NULL,2);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -465,4 +465,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-04-13 17:15:15
+-- Dump completed on 2026-04-27 23:17:34
