@@ -92,6 +92,14 @@
                                        <artifactId>thymeleaf-extras-springsecurity6</artifactId>
                                    </dependency>
                                    
+                                   <dependency>
+                                       <groupId>com.local</groupId>
+                                       <artifactId>nombre-de-tu-libreria</artifactId>
+                                       <version>1.0</version>
+                                       <scope>system</scope>
+                                       <systemPath>${project.basedir}/Libs/_archivo.JAR</systemPath> <!-- Cambiar  "_archivo.JAR" por el archivo correcto-->
+                                   </dependency>
+                                   
 	</dependencies>
 
 	<build>
