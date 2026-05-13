@@ -12,6 +12,12 @@ public class UsuarioDTO {
         this.rol = rol;
     }
     
+    public String getEmail() {return email;}
+    public void setEmail(String email) {this.email = email;}
+
+    public void setNombre(String nombre) {this.nombre = nombre;}
     public String getNombre() { return nombre; }
+    
     public String getRol() { return rol; }
+    public void setRol(String rol) {this.rol = rol;}
 }
