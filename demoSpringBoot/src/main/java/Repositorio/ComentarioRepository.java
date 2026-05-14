@@ -1,10 +1,10 @@
-package Repository;
+package Repositorio;
 
 import Modelo.Comentario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository // Indica que es un componente de acceso a datos (DAO)
+@Repository
 public interface ComentarioRepository extends JpaRepository<Comentario, Long> {
-    // JpaRepository: Proporciona métodos CRUD (save, delete, findById) automáticamente
+    // Aquí Java hereda automáticamente métodos como findById, save, y findAll
 }

@@ -1,27 +1,29 @@
 package Controlador;
 
-import Repository.ProductoRepository;
 import Modelo.Producto;
+import Repositorio.ProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.util.List;
 
-@RestController // Define la clase como un controlador de API JSON
-@RequestMapping("/api/productos") // Ruta base para las peticiones de productos
-@CrossOrigin(origins = "http://localhost:3000") // Permite que React acceda a los datos
+@RestController
+@RequestMapping("/api/productos")
+@CrossOrigin(origins = "http://localhost:3000") // Permite conexión con React
 public class ProductoController {
 
-    @Autowired // Conecta automáticamente con el repositorio de productos
+    @Autowired
     private ProductoRepository productoRepo;
 
-    @GetMapping // Maneja peticiones GET para obtener la lista completa
+    // Obtener todos los productos para la tienda
+    @GetMapping
     public List<Producto> listar() {
-        return productoRepo.findAll(); // Retorna todos los registros de la tabla
+        return productoRepo.findAll();
     }
 
-    @PostMapping("/guardar") // Maneja peticiones POST para crear productos
+    // Guardar nuevo producto con imagen desde el Admin
+    @PostMapping("/guardar")
     public Producto guardar(@RequestParam("nombre") String nombre,
                            @RequestParam("precio") Double precio,
                            @RequestParam("descripcion") String descripcion,
@@ -30,8 +32,7 @@ public class ProductoController {
         p.setNombre(nombre);
         p.setPrecio(precio);
         p.setDescripcion(descripcion);
-        p.setImagen(archivo.getBytes()); // Convierte la imagen subida a formato binario
-        
-        return productoRepo.save(p); // Almacena el nuevo producto en MySQL
+        p.setImagen(archivo.getBytes()); // Convierte el archivo a bytes para la BD
+        return productoRepo.save(p);
     }
 }
