@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './perfil.css';
+import './index.css';
 
 function Perfil() {
   return (
