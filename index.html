@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Cream Rose | Repostería Artesanal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/hero.js"></script>
+    <script src="js/search.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+    <h1 class="logo-text-h1">
+        <img src="assets/products/letra.png" alt="Sweet Cream Rose Logo" class="logo-img">
+    </h1>
+</div>
+    <nav>
+        <a href="index.html" class="active">INICIO</a>
+        <a href="productos.html">PRODUCTOS</a>
+        <a href="ofertas.html">OFERTAS</a>
+        <a href="nosotros.html">NOSOTROS</a>
+    </nav>
+    <div class="header-icons">
+        <form id="searchForm" class="search-box">
+    <input type="text" id="searchInput" placeholder="Buscar..." required>
+    
+    <button type="submit" style="background:none; border:none; cursor:pointer; color:inherit;">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+</form>
+        
+        <a href="perfil.html" class="header-icon-link" title="Mi Perfil">
+            <i class="fa-regular fa-user icon-btn"></i>
+        </a>
+        
+        <a href="carrito.html" class="header-icon-link" title="Ver Carrito">
+            <div class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">2</span>
+            </div>
+        </a>
+    </div>
+    
+</header>
+
+    <section class="hero-section">
+    <div class="hero-container">
+        <div class="hero-image">
+            <img id="hero-img" src="assets/products/torta_principal.jpg" alt="Especiales">
+        </div>
+        <div class="hero-content">
+            <h2 id="hero-title">Nuestros Especiales</h2>
+            <p id="hero-text">Especiales para cualquier ocasión y disfrutar con las personas que más quieres</p>
+            <a href="productos.html" class="btn-ver-mas">Ver más</a>
+        </div>
+    </div>
+    
+    <div class="slider-dots">
+        <span class="dot active" onclick="changeSlide(0)"></span>
+        <span class="dot" onclick="changeSlide(1)"></span>
+        <span class="dot" onclick="changeSlide(2)"></span>
+    </div>
+</section>
+
+    <main class="container">
+        <h2 class="section-title">LO MÁS COMPRADO</h2>
+        
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="assets/products/cupcake.jpg" alt="Cupcake de Fresa">
+                <div class="product-label">Cupcake de fresa</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/products/pay_limon.jpg" alt="Pay de limón">
+                <div class="product-label">Pay de limón</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/products/flan.jpg" alt="Flan de vainilla">
+                <div class="product-label">Flan de vainilla</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/products/galletas.jpg" alt="Galletas de fresa">
+                <div class="product-label">Galletas de fresa</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/products/gelatina.jpg" alt="Gelatinas">
+                <div class="product-label">Gelatina</div>
+            </div>
+            <div class="product-card">
+                <img src="assets/products/pastel_imposible.jpg" alt="Pastel imposible">
+                <div class="product-label">Pastel de Flan con Chocolate</div>
+            </div>
+        </div>
+        
+        <div class="center-btn">
+            <a href="productos.html" class="btn-secondary">Ver más</a>
+        </div>
+    </main>
+
+    <section class="festividades-section">
+        <h2 class="section-title">Promociones de Festividad</h2>
+        
+        <div class="festividad-banner navidad">
+            <div class="festividad-content">
+                <h3>POSTRES para acompañar esta NAVIDAD</h3>
+                <p>Mira los mejores postres para esta navidad y pasar tiempo en familia inolvidable.</p>
+                <a href="ofertas.html" class="btn-white">Ver más</a>
+            </div>
+            <div class="festividad-image">
+                <img src="assets/products/navidad.jpg" alt="Postres Navideños">
+            </div>
+        </div>
+
+        <div class="festividad-banner halloween">
+            <div class="festividad-content">
+                <h3>POSTRES para disfrutar en HALLOWEEN</h3>
+                <p>Descubre nuestros deliciosos postres para Halloween y organiza una fiesta espeluznante.</p>
+                <a href="ofertas.html" class="btn-white">Ver más</a>
+            </div>
+            <div class="festividad-image">
+                <img src="assets/products/halloween.jpg" alt="Postres Halloween">
+            </div>
+        </div>
+
+        <div class="center-btn">
+            <a href="ofertas.html" class="btn-secondary">Ver más</a>
+        </div>
+    </section>
+
+    <section class="comments-section">
+        <h2 class="section-title">Deja tu comentario</h2>
+        
+        <form class="comment-form" onsubmit="event.preventDefault();">
+            <div class="form-group">
+                <label for="name">NOMBRE</label>
+                <input type="text" id="name" placeholder="Escribe tu nombre completo">
+            </div>
+            <div class="form-group">
+                <textarea id="comment" rows="4" placeholder="Deja un comentario"></textarea>
+            </div>
+            <div class="form-submit">
+                <button type="submit" class="btn-comentar">COMENTAR</button>
+            </div>
+        </form>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-header">Juliana López</div>
+                <div class="testimonial-body">
+                    Sus paquetes son ideales para regalar sorpresas.
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">Emilio Orozco</div>
+                <div class="testimonial-body">
+                    Entregan a tiempo y con buena calidad cada postre.
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">Valentina Gómez</div>
+                <div class="testimonial-body">
+                    Tienen ricos sabores y los productos llegan a tiempo.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-brand">
+            <img src="assets/products/logo.png" alt="Sweet Cream Rose Logo" class="footer-logo-img">
+            <p class="footer-slogan">En un Mundo de experiencias duras con un pastel dale dulzura.</p>
+            <div class="social-links">
+                <span>SÍGUENOS</span>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3>ENLACES</h3>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>AYUDA</h3>
+            <ul>
+                <li><a href="#">Preguntas frecuentes</a></li>
+                <li><a href="#">Políticas de envío</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Políticas de privacidad</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>CONTÁCTANOS</h3>
+            <ul class="contact-info">
+                <li><i class="fa-solid fa-location-dot"></i> Lima, Perú</li>
+                <li><i class="fa-solid fa-phone"></i> +51 987654900</li>
+                <li><i class="fa-solid fa-envelope"></i> info@SweetCreamRose.com</li>
+                <li><i class="fa-solid fa-clock"></i> Lunes a Sábado: 9am - 6pm</li>
+            </ul>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sweet Cream Rose. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

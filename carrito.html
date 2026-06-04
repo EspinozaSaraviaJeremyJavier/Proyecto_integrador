@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Carrito - Sweet Cream Rose</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <h1 class="logo-text-h1">
+                <img src="assets/products/letra.png" alt="Sweet Cream Rose Logo" class="logo-img">
+            </h1>
+        </div>
+        <nav>
+            <a href="index.html">INICIO</a>
+            <a href="productos.html">PRODUCTOS</a>
+            <a href="ofertas.html">OFERTAS</a>
+            <a href="nosotros.html">NOSOTROS</a>
+        </nav>
+        <div class="header-icons">
+            <div class="search-box">
+                <input type="text" placeholder="Buscar...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            
+            <a href="perfil.html" class="header-icon-link" title="Mi Perfil">
+                <i class="fa-regular fa-user icon-btn"></i>
+            </a>
+            
+            <a href="carrito.html" class="header-icon-link" title="Ver Carrito">
+                <div class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="header-cart-count">4</span>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main class="cart-page-container">
+        <div class="cart-welcome-header">
+            <img src="assets/products/logo.png" alt="Sweet Cream Rose" class="cart-circle-logo">
+            <p class="cart-welcome-text">Tu espacio personal para organizar tus pedidos, favoritos y disfrutar de una experiencia más dulce.</p>
+        </div>
+
+        <h2 class="cart-main-title">MI CARRITO</h2>
+        <div class="title-divider"><span>--- ♥️ ---</span></div>
+
+        <section class="cart-section-box">
+            <h3 class="cart-box-title" id="cart-title-count">
+                <i class="fas fa-shopping-basket"></i> PRODUCTOS EN TU CARRITO (4)
+            </h3>
+            
+            <div class="cart-items-list" id="cart-items-container">
+                <!-- Producto 1 -->
+                <div class="cart-item-row">
+                    <img src="assets/products/torta_principal.jpg" alt="Torta Triple Chocolate" class="item-img">
+                    <div class="item-details">
+                        <h4>Torta Triple Chocolate</h4>
+                        <p>Deliciosa torta de chocolate húmedo con ganache</p>
+                    </div>
+                    <div class="item-controls">
+                        <div class="quantity-selector">
+                            <button class="qty-btn btn-minus">-</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-btn btn-plus">+</button>
+                        </div>
+                    </div>
+                    <div class="item-pricing">
+                        <span class="item-price" data-price="48.00">S/ 48.00</span>
+                        <span class="item-subtotal">Subtotal: S/ 48.00</span>
+                        <button class="btn-delete-item">Eliminar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="cart-item-row">
+                    <img src="assets/products/cupcake_arandano.png" alt="Cupcake de Arándanos" class="item-img">
+                    <div class="item-details">
+                        <h4>Cupcake de Arándanos</h4>
+                        <p>Cupcakes de vainilla con arándanos frescos</p>
+                    </div>
+                    <div class="item-controls">
+                        <div class="quantity-selector">
+                            <button class="qty-btn btn-minus">-</button>
+                            <span class="qty-value">2</span>
+                            <button class="qty-btn btn-plus">+</button>
+                        </div>
+                    </div>
+                    <div class="item-pricing">
+                        <span class="item-price" data-price="16.00">S/ 16.00</span>
+                        <span class="item-subtotal">Subtotal: S/ 32.00</span>
+                        <button class="btn-delete-item">Eliminar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="cart-item-row">
+                    <img src="assets/products/torta triple chocolate.jpg" alt="Alfajor artesanal" class="item-img">
+                    <div class="item-details">
+                        <h4>Alfajor Tradicional</h4>
+                        <p>Alfajor artesanal con manjar blanco y azúcar impalpable</p>
+                    </div>
+                    <div class="item-controls">
+                        <div class="quantity-selector">
+                            <button class="qty-btn btn-minus">-</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-btn btn-plus">+</button>
+                        </div>
+                    </div>
+                    <div class="item-pricing">
+                        <span class="item-price" data-price="11.00">S/ 11.00</span>
+                        <span class="item-subtotal">Subtotal: S/ 11.00</span>
+                        <button class="btn-delete-item">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="delivery-status-box">
+                <div class="delivery-info">
+                    <i class="fas fa-map-marker-alt pin-icon"></i>
+                    <div>
+                        <span class="delivery-title">Enviar a Casa</span>
+                        <span class="delivery-address">Av. Los Rosales 123, San Borja, Lima - Lima</span>
+                    </div>
+                </div>
+                <a href="#" class="btn-change-address">Cambiar →</a>
+            </div>
+
+            <div class="center-btn-container">
+                <a href="#" class="btn-shipping-options">
+                    <i class="fas fa-truck"></i> ELEGIR OPCIONES DE ENVÍO
+                </a>
+            </div>
+        </section>
+
+        <section class="cart-comments-box">
+            <h3 class="comments-box-title">
+                <i class="far fa-comment-dots"></i> COMENTARIOS DEL PEDIDO (OPCIONAL)
+            </h3>
+            <p class="comments-box-subtitle">Agrega indicaciones especiales para tu pedido, mensaje en la torta, detalles de entrega, etc.</p>
+            <div class="textarea-container">
+                <textarea id="cart-textarea" placeholder="Ejem: Escribir &quot;Feliz cumpleaños Ana&quot; en la torta" maxlength="250"></textarea>
+                <span class="char-count" id="char-counter">0/250</span>
+            </div>
+        </section>
+
+        <section class="cart-section-box">
+            <h3 class="cart-box-title">
+                <i class="far fa-clipboard"></i> COMPROBANTE DE PAGO
+            </h3>
+            <p class="cart-box-subtitle">Selecciona el tipo de comprobante</p>
+            
+            <div class="invoice-radio-group">
+                <label class="radio-label">
+                    <input type="radio" name="comprobante" value="boleta" checked>
+                    <span class="custom-radio"></span>
+                    <strong>Boleta</strong> (Para persona natural)
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="comprobante" value="factura">
+                    <span class="custom-radio"></span>
+                    <strong>Factura</strong> (Para empresa)
+                </label>
+            </div>
+
+            <div id="form-boleta" class="invoice-form-grid">
+                <div class="invoice-field">
+                    <label>Nombre Completo (Opcional)</label>
+                    <input type="text" placeholder="Ej. María Rodríguez">
+                </div>
+                <div class="invoice-field">
+                    <label>DNI (Opcional)</label>
+                    <input type="text" placeholder="Ej. 12345678">
+                </div>
+            </div>
+
+            <div id="form-factura" class="invoice-form-grid" style="display: none;">
+                <div class="invoice-field">
+                    <label>Razón Social</label>
+                    <input type="text" placeholder="Ej. Inversiones Dulces S.A.C.">
+                </div>
+                <div class="invoice-field">
+                    <label>RUC</label>
+                    <input type="text" placeholder="Ej. 20123456789">
+                </div>
+                <div class="invoice-field" style="grid-column: span 2;">
+                    <label>Dirección Fiscal</label>
+                    <input type="text" placeholder="Ej. Av. Primavera 456, San Borja">
+                </div>
+            </div>
+        </section>
+
+        <section class="cart-section-box">
+            <h3 class="cart-box-title">
+                <i class="fas fa-receipt"></i> RESUMEN DEL PEDIDO
+            </h3>
+            
+            <div class="summary-details">
+                <div class="summary-row">
+                    <span id="resumen-productos-text">Subtotal (4 productos)</span>
+                    <span id="resumen-subtotal">S/ 91.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Envío</span>
+                    <span id="resumen-envio" data-envio="8.00">S/ 8.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>IGV (18%)</span>
+                    <span id="resumen-igv">S/ 16.38</span>
+                </div>
+                <div class="summary-row total-row">
+                    <span>TOTAL</span>
+                    <span class="total-price" id="resumen-total">S/ 115.38</span>
+                </div>
+            </div>
+
+            <div class="center-btn-container">
+                <button class="btn-submit-pay" onclick="alert('¡Procesando pago con Sweet Cream Rose!')">IR A PAGAR →</button>
+            </div>
+
+            <div class="secure-checkout-badge">
+                <div class="shield-circle">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="secure-text">
+                    <h4>Tus compras están 100% protegidas</h4>
+                    <p>Usamos tecnología de encriptación avanzada para proteger tu información</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-brand">
+            <img src="assets/products/logo.png" alt="Sweet Cream Rose Logo" class="footer-logo-img">
+            <p class="footer-slogan">En un Mundo de experiencias duras con un pastel dale dulzura.</p>
+            <div class="social-links">
+                <span>SÍGUENOS</span>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3>ENLACES</h3>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>AYUDA</h3>
+            <ul>
+                <li><a href="#">Preguntas frecuentes</a></li>
+                <li><a href="#">Políticas de envío</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Políticas de privacidad</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>CONTÁCTANOS</h3>
+            <ul class="contact-info">
+                <li><i class="fa-solid fa-location-dot"></i> Lima, Perú</li>
+                <li><i class="fa-solid fa-phone"></i> +51 987654900</li>
+                <li><i class="fa-solid fa-envelope"></i> info@SweetCreamRose.com</li>
+                <li><i class="fa-solid fa-clock"></i> Lunes a Sábado: 9am - 6pm</li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sweet Cream Rose. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            /* 1. SELECCIÓN DE COMPROBANTE */
+            const radiosComprobante = document.querySelectorAll('input[name="comprobante"]');
+            const formBoleta = document.getElementById('form-boleta');
+            const formFactura = document.getElementById('form-factura');
+
+            radiosComprobante.forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    if (e.target.value === 'factura') {
+                        formBoleta.style.display = 'none';
+                        formFactura.style.display = 'grid';
+                    } else {
+                        formBoleta.style.display = 'grid';
+                        formFactura.style.display = 'none';
+                    }
+                });
+            });
+
+            /* 2. CÁLCULOS DINÁMICOS DEL CARRITO */
+            const containerItems = document.getElementById('cart-items-container');
+            const elementEnvio = document.getElementById('resumen-envio');
+            
+            function actualizarTotales() {
+                const filasProductos = document.querySelectorAll('.cart-item-row');
+                let sumaSubtotal = 0;
+                let cantidadTotalProductos = 0;
+
+                filasProductos.forEach(fila => {
+                    const precioBase = parseFloat(fila.querySelector('.item-price').getAttribute('data-price'));
+                    const cantidad = parseInt(fila.querySelector('.qty-value').innerText);
+
+                    const subtotalItem = precioBase * cantidad;
+                    fila.querySelector('.item-subtotal').innerText = `Subtotal: S/ ${subtotalItem.toFixed(2)}`;
+
+                    sumaSubtotal += subtotalItem;
+                    cantidadTotalProductos += cantidad;
+                });
+
+                // Si no hay productos, el costo de envío pasa a ser 0
+                const costoEnvio = (cantidadTotalProductos > 0) ? parseFloat(elementEnvio.getAttribute('data-envio')) : 0;
+                elementEnvio.innerText = `S/ ${costoEnvio.toFixed(2)}`;
+
+                // Cálculo correcto de IGV (Subtotal de productos * 18%)
+                const igv = sumaSubtotal * 0.18;
+                const totalFinal = sumaSubtotal + costoEnvio + igv;
+
+                // Actualizar vistas en DOM
+                document.getElementById('resumen-productos-text').innerText = `Subtotal (${cantidadTotalProductos} productos)`;
+                document.getElementById('resumen-subtotal').innerText = `S/ ${sumaSubtotal.toFixed(2)}`;
+                document.getElementById('resumen-igv').innerText = `S/ ${igv.toFixed(2)}`;
+                document.getElementById('resumen-total').innerText = `S/ ${totalFinal.toFixed(2)}`;
+                
+                document.getElementById('header-cart-count').innerText = cantidadTotalProductos;
+                document.getElementById('cart-title-count').innerHTML = `<i class="fas fa-shopping-basket"></i> PRODUCTOS EN TU CARRITO (${cantidadTotalProductos})`;
+            }
+
+            // Manejo de clicks en botones de + , - y Eliminar
+            if (containerItems) {
+                containerItems.addEventListener('click', (e) => {
+                    const boton = e.target;
+                    const filaProducto = boton.closest('.cart-item-row');
+                    if (!filaProducto) return;
+
+                    const spanCantidad = filaProducto.querySelector('.qty-value');
+                    let cantidadActual = parseInt(spanCantidad.innerText);
+
+                    if (boton.classList.contains('btn-plus')) {
+                        spanCantidad.innerText = cantidadActual + 1;
+                        actualizarTotales();
+                    } else if (boton.classList.contains('btn-minus')) {
+                        if (cantidadActual > 1) {
+                            spanCantidad.innerText = cantidadActual - 1;
+                            actualizarTotales();
+                        }
+                    } else if (boton.classList.contains('btn-delete-item')) {
+                        filaProducto.remove();
+                        actualizarTotales();
+                    }
+                });
+            }
+
+            /* 3. CONTADOR DE CARACTERES PARA LOS COMENTARIOS */
+            const textarea = document.getElementById('cart-textarea');
+            const charCounter = document.getElementById('char-counter');
+            if (textarea && charCounter) {
+                textarea.addEventListener('input', () => {
+                    charCounter.innerText = `${textarea.value.length}/250`;
+                });
+            }
+
+            actualizarTotales();
+        });
+    </script>
+</body>
+</html>
