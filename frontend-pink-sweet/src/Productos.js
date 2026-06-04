@@ -243,21 +243,21 @@ const Productos = () => {
   const dataActual = CATALOGO[categoriaActiva];
 
   return (
-    <div style={{ backgroundColor: '#FFEFEF' }}>
+    <div style={{ backgroundColor: '#FFEFEF', fontFamily: 'sans-serif' }}>
       
       <header style={{ backgroundColor: '#C6676D', width: '100%' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '10px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <img src={bannerPrincipal} alt="Sweet Cream Rose Logo" style={{ height: '45px', objectFit: 'contain', cursor: 'pointer' }} />
           <nav style={{ display: 'flex', gap: '15px' }}>
-            <button style={{ border: 'none', padding: '8px 20px', backgroundColor: '#EAAFB8', color: '#5A3E41', fontSize: '14px', cursor: 'pointer' }}>INICIO</button>
-            <button style={{ border: 'none', padding: '8px 20px', backgroundColor: '#FFEFEF', color: '#5A3E41', fontSize: '14px', cursor: 'pointer' }}>PRODUCTOS</button>
-            <button style={{ border: 'none', padding: '8px 20px', backgroundColor: '#EAAFB8', color: '#5A3E41', fontSize: '14px', cursor: 'pointer' }}>OFERTAS</button>
-            <button style={{ border: 'none', padding: '8px 20px', backgroundColor: '#EAAFB8', color: '#5A3E41', fontSize: '14px', cursor: 'pointer' }}>NOSOTROS</button>
+            <button style={{ border: 'none', padding: '8px 20px', backgroundColor: '#EAAFB8', color: '#5A3E41', fontFamily: 'Poppins-SemiBold', fontSize: '14px', cursor: 'pointer' }}>INICIO</button>
+            <button style={{ border: 'none', padding: '8px 20px', backgroundColor: '#FFEFEF', color: '#5A3E41', fontFamily: 'Poppins-SemiBold', fontSize: '14px', cursor: 'pointer' }}>PRODUCTOS</button>
+            <button style={{ border: 'none', padding: '8px 20px', backgroundColor: '#EAAFB8', color: '#5A3E41', fontFamily: 'Poppins-SemiBold', fontSize: '14px', cursor: 'pointer' }}>OFERTAS</button>
+            <button style={{ border: 'none', padding: '8px 20px', backgroundColor: '#EAAFB8', color: '#5A3E41', fontFamily: 'Poppins-SemiBold', fontSize: '14px', cursor: 'pointer' }}>NOSOTROS</button>
           </nav>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
             <div style={{ display: 'flex', alignItems: 'center', backgroundColor: 'white', borderRadius: '4px', padding: '0 10px', width: '220px' }}>
-              <input type="text" placeholder="Buscar..." style={{ border: 'none', outline: 'none', width: '100%', padding: '8px 0', backgroundColor: 'transparent' }} />
+              <input type="text" placeholder="Buscar..." style={{ border: 'none', outline: 'none', width: '100%', padding: '8px 0', backgroundColor: 'transparent', fontFamily: 'sans-serif' }} />
               <img src={iconLupa} alt="Lupa" style={{ height: '16px', cursor: 'pointer', marginLeft: '5px' }} />
             </div>
             <img src={iconUser} alt="Usuario" style={{ height: '32px', cursor: 'pointer' }} />
@@ -271,7 +271,7 @@ const Productos = () => {
 
       <section style={{ textAlign: 'center', padding: '40px 20px' }}>
         <img src={logoPrincipal} alt="Logo Sweet Cream Rose" style={{ width: '230px', objectFit: 'contain', marginBottom: '15px' }} />
-        <h2 style={{ color: '#5A3E41', margin: '10 0 25px 30', fontSize: '30px' }}>PRODUCTOS</h2>
+        <h2 style={{ color: '#5A3E41', margin: '10 0 25px 30', fontFamily: 'Poppins-Bold', fontSize: '30px' }}>PRODUCTOS</h2>
         <img src={dividerTitle} alt="divisor" style={{ width: '180px', height: 'auto', display: 'block', margin: '0 auto 20px auto' }} />
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '15px', maxWidth: '850px', margin: '0 auto', justifyContent: 'center' }}>
@@ -284,7 +284,7 @@ const Productos = () => {
                 gridColumn: cat.col ? cat.col : 'auto', // Centra los últimos dos si tienen "col"
                 display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', height: '90px', 
                 border: '2px solid #DE788E', borderRadius: '10px', padding: '0 15px', 
-              cursor: 'pointer', fontWeight: 'bold',
+                fontFamily: 'Poppins-SemiBold', cursor: 'pointer', fontWeight: 'bold',
                 backgroundColor: categoriaActiva === cat.id ? '#DE788E' : '#FFEFEF', 
                 color: categoriaActiva === cat.id ? 'white' : '#984350',
               }}
@@ -308,7 +308,7 @@ const Productos = () => {
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '15px' }}>
           <img src={dataActual.icono} alt={`Icono ${dataActual.titulo}`} style={{ width: '80px', height: '80px' }} />
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <h1 style={{ color: '#5A3E41', fontSize: '40px', margin: '0' }}>
+            <h1 style={{ color: '#5A3E41', fontSize: '40px', fontFamily: 'Poppins-Bold', margin: '0' }}>
               {dataActual.titulo}
             </h1>
             <img src={dividerSub} alt="Divisor Subtitulo" style={{ width: '100%', height: '26px', marginTop: '-10px', objectFit: 'contain' }} />
@@ -338,7 +338,7 @@ const Productos = () => {
                 
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexDirection: isEven ? 'row' : 'row-reverse' }}>
                   <div style={{ display: 'flex', flexDirection: 'column', alignItems: isEven ? 'flex-start' : 'flex-end' }}>
-                    <h2 style={{ color: '#5A3E41', fontSize: '32px', margin: '0 0 5px 0' }}>{prod.nombre}</h2>
+                    <h2 style={{ color: '#5A3E41', fontSize: '32px', margin: '0 0 5px 0', fontFamily: 'Poppins-Bold' }}>{prod.nombre}</h2>
                     <img src={dividerProduct} alt="Divisor de Producto" style={{ width: '100%', height: '26px', marginTop: '-5px', objectFit: 'contain' }} />
                   </div>
                   <div style={{ width: '45px', height: '45px', borderRadius: '100%', backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '0 0px 5px rgba(0,0,0,0.1)', cursor: 'pointer' }}>
@@ -346,19 +346,19 @@ const Productos = () => {
                   </div>
                 </div>
 
-                <p style={{ color: '#222', fontSize: '15px', lineHeight: '1.6', margin: '10px 0' }}>
+                <p style={{ color: '#222', fontSize: '15px', fontFamily: 'Poppins-Medium', lineHeight: '1.6', margin: '10px 0' }}>
                   {prod.desc}
                 </p>
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', justifyContent: isEven ? 'flex-start' : 'flex-end' }}>
-                  <span style={{ fontSize: '24px', color: '#5A3E41' }}>S/. {prod.precio}</span>
-                  <span style={{ fontSize: '14px', color: '#59423CBA' }}>por unidad</span>
+                  <span style={{ fontSize: '24px', color: '#5A3E41', fontFamily: 'Poltawski-Nowy' }}>S/. {prod.precio}</span>
+                  <span style={{ fontSize: '14px', color: '#59423CBA', fontFamily: 'Poppins-Medium' }}>por unidad</span>
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginTop: '10px', justifyContent: isEven ? 'flex-start' : 'flex-end' }}>
-                  <label style={{ fontSize: '15px', color: '#000000' }}>Cantidad:</label>
-                  <input type="number" defaultValue="1" style={{ width: '110px', backgroundColor: '#EAAFB8', border: '1px solid #C3666D', borderRadius: '0px', padding: '5px', color: 'white', textAlign: 'center' }} />
-                  <button style={{ backgroundColor: '#C3666D', color: 'white', border: 'none', padding: '6px 26px', borderRadius: '20px', cursor: 'pointer', fontSize: '15px' }}>Comprar</button>
+                  <label style={{ fontSize: '15px', fontFamily: 'Poppins-Medium', color: '#000000' }}>Cantidad:</label>
+                  <input type="number" defaultValue="1" style={{ width: '110px', backgroundColor: '#EAAFB8', border: '1px solid #C3666D', borderRadius: '0px', padding: '5px', color: 'white', fontFamily: 'Poppins-Medium', textAlign: 'center' }} />
+                  <button style={{ backgroundColor: '#C3666D', color: 'white', border: 'none', padding: '6px 26px', borderRadius: '20px', cursor: 'pointer', fontFamily: 'Poppins-Medium', fontSize: '15px' }}>Comprar</button>
                 </div>
               </div>
 
@@ -374,11 +374,11 @@ const Productos = () => {
             <img src={iconShop} alt="Icono Tienda" style={{ width: '65%', height: 'auto', objectFit: 'contain' }} />
           </div>
           <div>
-            <h3 style={{ color: '#7D2530', margin: '0 0 5px 0', fontSize: '22px' }}>¿No encuentras lo que buscas?</h3>
-            <p style={{ margin: '0', color: '#B14B47', fontSize: '19px', maxWidth: '400px', lineHeight: '1.2' }}>Contáctanos y con gusto te ayudamos a crear el postre perfecto</p>
+            <h3 style={{ color: '#7D2530', margin: '0 0 5px 0', fontSize: '22px', fontFamily: 'Poppins-SemiBold' }}>¿No encuentras lo que buscas?</h3>
+            <p style={{ margin: '0', color: '#B14B47', fontSize: '19px', fontFamily: 'Signika-Regular', maxWidth: '400px', lineHeight: '1.2' }}>Contáctanos y con gusto te ayudamos a crear el postre perfecto</p>
           </div>
         </div>
-        <button style={{ backgroundColor: '#C3666D', color: 'white', fontSize: '16px', border: 'none', padding: '12px 30px', borderRadius: '10px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '10px', flexShrink: 0 }}>CONTACTAR <span style={{ fontSize: '18px' }}>›</span></button>
+        <button style={{ backgroundColor: '#C3666D', color: 'white', fontSize: '16px', fontFamily: 'Poppins-Bold', border: 'none', padding: '12px 30px', borderRadius: '10px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '10px', flexShrink: 0 }}>CONTACTAR <span style={{ fontSize: '18px' }}>›</span></button>
       </section>
 
       <footer style={{ backgroundColor: '#C2656C', color: 'white', padding: '60px 40px 20px 40px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -420,12 +420,12 @@ const Productos = () => {
         <div style={{ width: '100%', borderTop: '1px solid #EAAFB8', marginBottom: '20px' }}></div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', maxWidth: '1100px', margin: '0 auto' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-            <span style={{ fontSize: '15px', fontWeight: 'bold', color: 'white' }}>SÍGUENOS</span>
+            <span style={{ fontSize: '15px', fontWeight: 'bold', color: 'white', fontFamily: 'Poppins-Bold' }}>SÍGUENOS</span>
             <img src={iconUser} alt="Facebook" style={{ width: '25px', height: '25px', cursor: 'pointer' }} />
             <img src={iconUser} alt="Instagram" style={{ width: '25px', height: '25px', cursor: 'pointer' }} />
             <img src={iconUser} alt="WhatsApp" style={{ width: '25px', height: '25px', cursor: 'pointer' }} />
           </div>
-          <p style={{ fontSize: '13px', color: 'white', margin: '0', textAlign: 'right' }}>© 2026 Sweet Cream Rose. Todos los derechos reservados.</p>
+          <p style={{ fontSize: '13px', color: 'white', margin: '0', textAlign: 'right', fontFamily: 'Poppins-Regular' }}>© 2026 Sweet Cream Rose. Todos los derechos reservados.</p>
         </div>
       </footer>
     </div>
