@@ -1,0 +1,2 @@
+ir a la carpeta en cmd: cd frontend-pink-sweet
+correr en CMD: npm start 
