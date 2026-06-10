@@ -2,8 +2,8 @@
 // Replica exactamente nosotros.html
 
 import React from 'react';
-import { Header, Footer } from './Layout';
-import './Stylee.css';
+import { Header, Footer } from '../../compartido/layout/Layout';
+import '../../compartido/estilos/Stylee.css';
 
 function Nosotros() {
   return (

@@ -1,105 +1,105 @@
 import React, { useState } from 'react';
-import logoPrincipal from './assets/logo.png';
-import bannerPrincipal from './assets/banner.png';
-import iconUser from './assets/icon-user.png';
-import iconCart from './assets/icon-cart.png';
-import iconShop from './assets/icon-shop.png';
-import iconLupa from './assets/icon-lupa.png';
-import dividerTitle from './assets/divider-title.png';
-import dividerSub from './assets/divider-subtitle.png';
-import dividerProduct from './assets/divider-product.png';
+import logoPrincipal from '../../assets/logo.png';
+import bannerPrincipal from '../../assets/banner.png';
+import iconUser from '../../assets/icon-user.png';
+import iconCart from '../../assets/icon-cart.png';
+import iconShop from '../../assets/icon-shop.png';
+import iconLupa from '../../assets/icon-lupa.png';
+import dividerTitle from '../../assets/divider-title.png';
+import dividerSub from '../../assets/divider-subtitle.png';
+import dividerProduct from '../../assets/divider-product.png';
 
 // ICONOS
-import iconEntremets from './assets/icon-entremets.png';
-import iconTortas from './assets/icon-tortas-clasicas.png';
-import iconGalletas from './assets/icon-galletas.png';
-import iconTequenos from './assets/icon-tequenos.png';
-import iconSandwiches from './assets/icon-mini-sandwiches.png';
-import iconEmpanadas from './assets/icon-mini-empanadas.png';
-import iconAlfajores from './assets/icon-alfajores.png';
-import iconTrufas from './assets/icon-trufas.png';
-import iconPostres from './assets/icon-postres-frios.png';
-import iconCupcakes from './assets/icon-cupcakes.png';
+import iconEntremets from '../../assets/icon-entremets.png';
+import iconTortas from '../../assets/icon-tortas-clasicas.png';
+import iconGalletas from '../../assets/icon-galletas.png';
+import iconTequenos from '../../assets/icon-tequenos.png';
+import iconSandwiches from '../../assets/icon-mini-sandwiches.png';
+import iconEmpanadas from '../../assets/icon-mini-empanadas.png';
+import iconAlfajores from '../../assets/icon-alfajores.png';
+import iconTrufas from '../../assets/icon-trufas.png';
+import iconPostres from '../../assets/icon-postres-frios.png';
+import iconCupcakes from '../../assets/icon-cupcakes.png';
 
 // ENTREMETS
-import imgELimon from './assets/products/e-limon.png';
-import imgEGlaseadoEspejo from './assets/products/e-glaseado-espejo.png';
-import imgEFresa from './assets/products/e-fresa.png';
-import imgEMora from './assets/products/e-mora.png';
-import imgECoco from './assets/products/e-coco.png';
-import imgEMiniEntremets from './assets/products/e-mini-entremets.png';
+import imgELimon from '../../assets/products/e-limon.png';
+import imgEGlaseadoEspejo from '../../assets/products/e-glaseado-espejo.png';
+import imgEFresa from '../../assets/products/e-fresa.png';
+import imgEMora from '../../assets/products/e-mora.png';
+import imgECoco from '../../assets/products/e-coco.png';
+import imgEMiniEntremets from '../../assets/products/e-mini-entremets.png';
 
 // TORTAS CLASICAS
-import imgTcTripleChocolate from './assets/products/tc-triple-chocolate.png';
-import imgTcVainillaConFrutas from './assets/products/tc-vainilla-con-frutas.png';
-import imgTcZanahoria from './assets/products/tc-zanahoria.png';
-import imgTcRedVelvet from './assets/products/tc-red-velvet.png';
-import imgTcChocolate from './assets/products/tc-chocolate.png';
-import imgTcMaracuya from './assets/products/tc-maracuya.png';
+import imgTcTripleChocolate from '../../assets/products/tc-triple-chocolate.png';
+import imgTcVainillaConFrutas from '../../assets/products/tc-vainilla-con-frutas.png';
+import imgTcZanahoria from '../../assets/products/tc-zanahoria.png';
+import imgTcRedVelvet from '../../assets/products/tc-red-velvet.png';
+import imgTcChocolate from '../../assets/products/tc-chocolate.png';
+import imgTcMaracuya from '../../assets/products/tc-maracuya.png';
 
 // GALLETAS
-import imgGFresa from './assets/products/g-fresa.jpg';
-import imgGPina from './assets/products/g-pina.jpg';
-import imgGManzana from './assets/products/g-manzana.jpg';
-import imgGChocolate from './assets/products/g-chocolate.png';
-import imgGAvenaYPasas from './assets/products/g-avena-y-pasas.png';
-import imgGPersonalizadas from './assets/products/g-personalizadas.jpg';
+import imgGFresa from '../../assets/products/g-fresa.jpg';
+import imgGPina from '../../assets/products/g-pina.jpg';
+import imgGManzana from '../../assets/products/g-manzana.jpg';
+import imgGChocolate from '../../assets/products/g-chocolate.png';
+import imgGAvenaYPasas from '../../assets/products/g-avena-y-pasas.png';
+import imgGPersonalizadas from '../../assets/products/g-personalizadas.jpg';
 
 // TEQUENOS VARIADOS
-import imgTvPollo from './assets/products/tv-pollo.png';
-import imgTvClasicos from './assets/products/tv-clasicos.png';
-import imgTvQuesoGouda from './assets/products/tv-queso-gouda.png';
-import imgTvGuayabaYQueso from './assets/products/tv-guayaba-y-queso.png';
-import imgTvJamonYQueso from './assets/products/tv-jamon-y-queso.png';
-import imgTvNuttela from './assets/products/tv-nuttela.png';
+import imgTvPollo from '../../assets/products/tv-pollo.png';
+import imgTvClasicos from '../../assets/products/tv-clasicos.png';
+import imgTvQuesoGouda from '../../assets/products/tv-queso-gouda.png';
+import imgTvGuayabaYQueso from '../../assets/products/tv-guayaba-y-queso.png';
+import imgTvJamonYQueso from '../../assets/products/tv-jamon-y-queso.png';
+import imgTvNuttela from '../../assets/products/tv-nuttela.png';
 
 // MINI SANDWICHES
-import imgMsMiniSandwichesGourmet from './assets/products/ms-mini-sandwiches-gourmet.png';
-import imgMsMiniCroissantsRellenos from './assets/products/ms-mini-croissants-rellenos.png';
-import imgMsMiniSandwichesDelipe from './assets/products/ms-mini-sandwiches-delipe.png';
-import imgMsMiniBaguettas from './assets/products/ms-mini-baguettas.png';
-import imgMsMiniWraps from './assets/products/ms-mini-wraps.png';
-import imgMsMiniCiabattas from './assets/products/ms-mini-ciabattas.png';
+import imgMsMiniSandwichesGourmet from '../../assets/products/ms-mini-sandwiches-gourmet.png';
+import imgMsMiniCroissantsRellenos from '../../assets/products/ms-mini-croissants-rellenos.png';
+import imgMsMiniSandwichesDelipe from '../../assets/products/ms-mini-sandwiches-delipe.png';
+import imgMsMiniBaguettas from '../../assets/products/ms-mini-baguettas.png';
+import imgMsMiniWraps from '../../assets/products/ms-mini-wraps.png';
+import imgMsMiniCiabattas from '../../assets/products/ms-mini-ciabattas.png';
 
 // MINI EMPANADAS
-import imgMePollo from './assets/products/me-pollo.png';
-import imgMeQueso from './assets/products/me-queso.png';
-import imgMeCarne from './assets/products/me-carne.png';
-import imgMeEspinacaYQueso from './assets/products/me-espinaca-y-queso.png';
-import imgMeJamonYQueso from './assets/products/me-jamon-y-queso.png';
-import imgMeChampinones from './assets/products/me-champinones.png';
+import imgMePollo from '../../assets/products/me-pollo.png';
+import imgMeQueso from '../../assets/products/me-queso.png';
+import imgMeCarne from '../../assets/products/me-carne.png';
+import imgMeEspinacaYQueso from '../../assets/products/me-espinaca-y-queso.png';
+import imgMeJamonYQueso from '../../assets/products/me-jamon-y-queso.png';
+import imgMeChampinones from '../../assets/products/me-champinones.png';
 
 // ALFAJORES
-import imgAClasico from './assets/products/a-clasico.png';
-import imgAChocolate from './assets/products/a-chocolate.png';
-import imgACoco from './assets/products/a-coco.png';
-import imgAManjarYNueces from './assets/products/a-manjar-y-nueces.png';
-import imgAChocolateBlanco from './assets/products/a-chocolate-blanco.png';
-import imgAColores from './assets/products/a-colores.png';
+import imgAClasico from '../../assets/products/a-clasico.png';
+import imgAChocolate from '../../assets/products/a-chocolate.png';
+import imgACoco from '../../assets/products/a-coco.png';
+import imgAManjarYNueces from '../../assets/products/a-manjar-y-nueces.png';
+import imgAChocolateBlanco from '../../assets/products/a-chocolate-blanco.png';
+import imgAColores from '../../assets/products/a-colores.png';
 
 // TRUFAS
-import imgTClasicas from './assets/products/t-clasicas.png';
-import imgTFresa from './assets/products/t-fresa.png';
-import imgTOreo from './assets/products/t-oreo.png';
-import imgTMaracuya from './assets/products/t-maracuya.png';
-import imgTChocolateBelga from './assets/products/t-chocolate-belga.png';
-import imgTCoco from './assets/products/t-coco.png';
+import imgTClasicas from '../../assets/products/t-clasicas.png';
+import imgTFresa from '../../assets/products/t-fresa.png';
+import imgTOreo from '../../assets/products/t-oreo.png';
+import imgTMaracuya from '../../assets/products/t-maracuya.png';
+import imgTChocolateBelga from '../../assets/products/t-chocolate-belga.png';
+import imgTCoco from '../../assets/products/t-coco.png';
 
 // POSTRES FRIOS
-import imgPfMini3LechesClasico from './assets/products/pf-mini-3-leches-clasico.png';
-import imgPfMini3LechesDeChocolate from './assets/products/pf-mini-3-leches-de-chocolate.png';
-import imgPfMini3LechesDeFresa from './assets/products/pf-mini-3-leches-de-fresa.png';
-import imgPfMini3LechesDeMaracuya from './assets/products/pf-mini-3-leches-de-maracuya.png';
-import imgPfVasitoDeOreoCream from './assets/products/pf-vasito-de-oreo-cream.png';
-import imgPfVasitoDeFresaYChantilly from './assets/products/pf-vasito-de-fresa-y-chantilly.png';
+import imgPfMini3LechesClasico from '../../assets/products/pf-mini-3-leches-clasico.png';
+import imgPfMini3LechesDeChocolate from '../../assets/products/pf-mini-3-leches-de-chocolate.png';
+import imgPfMini3LechesDeFresa from '../../assets/products/pf-mini-3-leches-de-fresa.png';
+import imgPfMini3LechesDeMaracuya from '../../assets/products/pf-mini-3-leches-de-maracuya.png';
+import imgPfVasitoDeOreoCream from '../../assets/products/pf-vasito-de-oreo-cream.png';
+import imgPfVasitoDeFresaYChantilly from '../../assets/products/pf-vasito-de-fresa-y-chantilly.png';
 
 // CUPCAKES
-import imgCChocolate from './assets/products/c-chocolate.jpg';
-import imgCVainilla from './assets/products/c-vainilla.jpg';
-import imgCZanahoria from './assets/products/c-zanahoria.jpg';
-import imgCFresa from './assets/products/c-fresa.png';
-import imgCOreo from './assets/products/c-oreo.png';
-import imgCArandano from './assets/products/c-arandano.png';
+import imgCChocolate from '../../assets/products/c-chocolate.jpg';
+import imgCVainilla from '../../assets/products/c-vainilla.jpg';
+import imgCZanahoria from '../../assets/products/c-zanahoria.jpg';
+import imgCFresa from '../../assets/products/c-fresa.png';
+import imgCOreo from '../../assets/products/c-oreo.png';
+import imgCArandano from '../../assets/products/c-arandano.png';
 
 const Productos = () => {
   const [categoriaActiva, setCategoriaActiva] = useState('empanadas');

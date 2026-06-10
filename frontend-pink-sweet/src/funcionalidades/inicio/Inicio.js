@@ -1,10 +1,10 @@
 // App.js — Página de INICIO interactiva
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Header, Footer } from './Layout';
-import './Stylee.css';
+import { Header, Footer } from '../../compartido/layout/Layout';
+import '../../compartido/estilos/Stylee.css';
 
-function App() {
+function Inicio() {
   const navigate = useNavigate();
   const [slideActivo, setSlideActivo] = useState(0);
   const [nombre, setNombre] = useState('');
@@ -248,4 +248,4 @@ function App() {
   );
 }
 
-export default App;
+export default Inicio;

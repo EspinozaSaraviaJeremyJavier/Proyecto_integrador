@@ -3,8 +3,8 @@
 
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Header, Footer } from './Layout';
-import './Stylee.css';
+import { Header, Footer } from '../../compartido/layout/Layout';
+import '../../compartido/estilos/Stylee.css';
 
 const itemsIniciales = [
   { id: 1, img: '/assets/products/torta_principal.jpg',       nombre: 'Torta Triple Chocolate',  desc: 'Deliciosa torta de chocolate húmedo con ganache', precio: 48.00, cantidad: 1 },

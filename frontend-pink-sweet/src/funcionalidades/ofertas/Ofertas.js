@@ -3,8 +3,8 @@
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Header, Footer } from './Layout';
-import './Stylee.css';
+import { Header, Footer } from '../../compartido/layout/Layout';
+import '../../compartido/estilos/Stylee.css';
 
 const ofertasDestacadas = [
   { img: '/assets/products/torta triple chocolate.jpg', nombre: 'Torta Triple Chocolate', desc: 'Delicioso bizcocho de chocolate con relleno y cobertura de ganache, decorada con crema de chocolate.', precioOld: 'S/. 80.00', precioNew: 'S/. 64.00', badge: '-20%' },
