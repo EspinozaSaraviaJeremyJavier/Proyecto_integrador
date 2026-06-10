@@ -4,6 +4,19 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+### Local OS / environment ###
+.DS_Store
+*.log
+.env
+.env.*
+
+### Maven ###
+*.class
+*.jar
+*.war
+*.ear
+dependency-reduced-pom.xml
+
 ### STS ###
 .apt_generated
 .classpath
